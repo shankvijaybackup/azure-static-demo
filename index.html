@@ -1,11 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Azure Demo App</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <title>Azure Demo App</title>
+
+  <!-- Application Insights JS SDK -->
+  <script type="text/javascript">
+    var appInsights=window.appInsights||function(a){
+      function b(a){c[a]=function(){var b=arguments;c.queue.push(function(){c[a].apply(c,b)})}}var c={config:a},d=document,e=window;
+      setTimeout(function(){var b=d.createElement("script");b.src=a.url||"https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",
+      d.getElementsByTagName("head")[0].appendChild(b)});
+      try{c.cookie=d.cookie}catch(a){}
+      c.queue=[];for(var f=["trackEvent","trackPageView","trackException","trackTrace","trackDependency","setAuthenticatedUserContext","clearAuthenticatedUserContext","startTrackEvent","stopTrackEvent"],g=0;g<f.length;g++)b(f[g]);
+      return c
+    }({
+      instrumentationKey:"69b8865a-ccec-45ff-ac73-a93ac9bd7316"
+    });
+    window.appInsights=appInsights,appInsights.queue&&0===appInsights.queue.length&&appInsights.trackPageView();
+  </script>
+
 </head>
+
 <body>
     <h1>Welcome to Azure Demo App 🚀</h1>
     <p>This is a simple static website deployed on Azure App Service.</p>
